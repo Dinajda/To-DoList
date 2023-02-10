@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="529.0" prefWidth="293.0" tabClosingPolicy="UNAVAILABLE" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19" fx:controller="com.example.todolist.HelloController">
+  <tabs>
+    <Tab text="To Do">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="list" layoutX="9.0" layoutY="48.0" onKeyReleased="#listView1_KeyDown" prefHeight="332.0" prefWidth="274.0" />
+                  <DatePicker fx:id="date" layoutX="7.0" layoutY="12.0" />
+                  <Label fx:id="add" layoutX="4.0" layoutY="419.0" prefHeight="14.0" prefWidth="118.0" text="Add task:" />
+                  <TextField fx:id="write" layoutX="4.0" layoutY="442.0" onAction="#anyAction" onKeyPressed="#keyPressed" prefHeight="25.0" prefWidth="282.0" />
+                  <ProgressBar fx:id="progress" layoutX="48.0" layoutY="385.0" prefWidth="200.0" progress="0.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Already done">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <ListView fx:id="done" layoutX="16.0" layoutY="17.0" prefHeight="315.0" prefWidth="258.0" />
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
